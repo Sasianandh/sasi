@@ -4,7 +4,7 @@ int main()
 int low, high, i, flag;
 printf("Enter the two numbers(intervals): ");
   scanf("%d %d", &low, &high);
-printf("odd numbers between %d and %d are: ", low, high);
+printf("prime numbers between %d and %d are: ", low, high);
 
 while (low < high)
     {
@@ -19,7 +19,7 @@ break;
 }
 
 if (flag == 0)
-printf("odd no is %d ", low);
+printf("prime no is %d ", low);
 ++low;
     }
  return 0;
