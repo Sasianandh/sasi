@@ -1,21 +1,14 @@
 #include<stdio.h>
+#include<conio.h>
 void main()
 {
-int i,n,s,a,b,sum=0;
-//scanf("%d %d",&a,&b);
-for(i=100;i<500;i++)
+int i,n; scanf("%d",&n);
+for(i=n;i<=n+5;i++)
 {
-s=i;
-while(s!=0)
-{
-s=s%10;
-b=n*n*n;
-sum=sum+b;
-s=s/10;
+ sum=sum*i;
 }
-if(sum==i)
-printf("%d",i);
-}
+ printf("the value is",sum);
+  getch();
 }
 
 
