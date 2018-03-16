@@ -15,9 +15,15 @@ void main()
             j++;
             }
     }
+    if(k>=j)
+    printf("no odd num present at this position");
+    else
+    {
     for(i=1;i<=j;i++)
     {
         if(i==k) 
-        printf("%d",b[i]);
+        printf("position %d odd number = %d",k,b[i]);
     }
+    }
+    
 }
