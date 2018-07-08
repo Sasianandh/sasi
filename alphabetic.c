@@ -1,7 +1,7 @@
 #include<stdio.h>
 void main()
 {
-    char s[10][20];
+    char s[100][200];
     int i,j,n,b[100],a[100],t;
     scanf("%d",&n);
     for(i=0;i<n;i++)
@@ -29,15 +29,18 @@ void main()
         }
     }
     }
+    printf("in alphabetic order\n");
     for(i=0;i<n;i++)
     {
-    for(j=i+1;j<n;j++)
+    for(j=0;j<n;j++)
     {
        if(a[i]==b[j])
        {
            printf("%s",s[j]);
            b[j]=0;
+           break;
        }
     }
+    printf("\t");
     }
 }
