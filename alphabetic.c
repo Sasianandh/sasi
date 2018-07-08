@@ -2,9 +2,12 @@
 void main()
 {
     char s[10][20];
-    int i,n,b[100],a[100];
-    gets(s);
+    int i,j,n,b[100],a[100],t;
     scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+    scanf("%s",&s[i]);
+    }
     for(i=0;i<n;i++)
     {
     if(s[i][0]>=97&&s[i][0]<=122)
@@ -13,5 +16,28 @@ void main()
     }
     a[i]=s[i][0]-65;
     b[i]=a[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+    {
+        if(a[i]>a[j])
+        {
+            t=a[i];
+            a[i]=a[j];
+            a[j]=t;
+        }
+    }
+    }
+    for(i=0;i<n;i++)
+    {
+    for(j=i+1;j<n;j++)
+    {
+       if(a[i]==b[j])
+       {
+           printf("%s",s[j]);
+           b[j]=0;
+       }
+    }
     }
 }
